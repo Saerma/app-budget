@@ -1,0 +1,73 @@
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application de Gestion de Budget</title>
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Polices Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<div class="wrapper">
+    <div class="container">
+        <div class="sub-container">
+            <!-- Budget -->
+            <div class="total-amount-container">
+                <h3>Budget</h3>
+                <p class="hide error" id="budget-error">
+                    La valeur ne peut pas être vide ou négative
+                </p>
+                <input type="number" id="total-amount" placeholder="Entrez le montant total" />
+                <button class="submit" id="total-amount-button">Définir le budget</button>
+            </div>
+
+            <!-- Dépenses -->
+            <div class="user-amount-container">
+                <h3>Dépenses</h3>
+                <p class="hide error" id="product-title-error">
+                    Les valeurs ne peuvent pas être vides
+                </p>
+                <input type="text" class="product-title" id="product-title" placeholder="Entrez le nom du produit" />
+                <input type="number" id="user-amount" placeholder="Entrez le coût du produit" />
+                <input type="date" placeholder="Entrez le coût du produit" id="user-amount" />
+                <button class="submit" id="check-amount">Vérifier le montant</button>
+            </div>
+        </div>
+        <!-- Résultat -->
+        <div class="output-container flex-space">
+            <div>
+                <p>Budget total</p>
+                <span id="amount">0</span>
+            </div>
+            <div>
+                <p>Dépenses</p>
+                <span id="expenditure-value">0</span>
+            </div>
+            <div>
+                <p>Solde</p>
+                <span id="balance-amount">0</span>
+            </div>
+        </div>
+    </div>
+    <!-- Liste -->
+    <div class="list">
+        <h3>Liste des dépenses</h3>
+        <div class="list-container" id="list"></div>
+    </div>
+</div>
+
+<!-- Deconnexion -->
+
+<button class="submit " id="logout"><a href="./login.html" class="text-decoration-none"> Deconnexion</a></button>
+
+
+
+<!-- Script -->
+<script src="app.js"></script>
+</body>
+
+</html>
