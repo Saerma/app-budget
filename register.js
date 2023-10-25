@@ -123,7 +123,7 @@ if(addData) {
         confirmPW: confirmPW,
         statut: statut,
       });
-      window.location.href = "login.html";
+      window.location.href = "index.html";
       alert("Inscription réussie !");
     } else {
       alert("Veillez remplir tous les champs ");
