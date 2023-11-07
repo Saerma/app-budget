@@ -12,6 +12,7 @@ const login = document.getElementById("login");
       e.preventDefault();
       const result = user.find((el) => el.email === inputEmail.value && el.password === inputPassword.value)
       console.log(result);
+      if (result) {
       if (result.statut === "Admin") {
         alert(
           "Il n'y a pas d'enregistrement d'utilisateur correspondant à cet identifiant. L'utilisateur a peut-être été supprimé."
@@ -19,9 +20,15 @@ const login = document.getElementById("login");
       } else{
         window.location.href = "admin.html";
         alert("Connexion réussie !");
-      }
+      } 
+    } else {
+      window.location.href = "register.html";
+      alert("Aucun compte trouvé pour cet identifiant. Veuillez vous inscrire.");
+    } 
     } else {
       alert("Veullez remplir tous les champs");
     }
   });
+
+  
 
